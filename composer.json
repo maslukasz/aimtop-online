@@ -1,0 +1,9 @@
+{
+    "require": {
+        "leafs/leaf": "^3.0",
+        "leafs/db": "^2.1"
+    },
+    "require-dev": {
+        "leafs/alchemy": "^1.0"
+    }
+}
