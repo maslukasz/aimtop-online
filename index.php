@@ -56,6 +56,12 @@ app()->get('/ra/hard', function () {
     response()->page('./src/benchmarks/ra/al_hard.php');
 });
 
+
+// BLOG
+app()->get('/blog/aimcademy-fps', function () {
+    response()->page('./src/blog/aimacademy-fps.php');
+});
+
 app()->get('/', function () {
     response()->page('./welcome.html');
 });
@@ -63,17 +69,10 @@ app()->get('/', function () {
 app()->get('/test', function () {
     response()->page('./src/home.php');
 });
-// Obsługa logowania
 
 
 
-app()->get('/dashboard', function () {
-    if (!isset($_SESSION['user_id'])) {
-        response()->redirect('/auth/login');
-    } else {
-        response()->page('./src/dashboard.php');
-    }
-});
+
 
 
 app()->run();
