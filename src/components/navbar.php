@@ -21,7 +21,7 @@
                     <a href="/auth/register" class="btn btn-danger">Sign Up</a>
                     <a href="/auth/login" class="btn btn-success">Login</a>
                 <?php else: ?>
-                    <a href="../../../todo.php"><button class='btn btn-warning'>Profile</button></a>
+                    <a href="/"><button class='btn btn-warning'>Profile</button></a>
                 <?php endif; ?>
             </div>
         </span>

@@ -134,5 +134,3 @@
     </section>
 
 </body>
-
-<?php require_once './src/components/footer.php'; ?>

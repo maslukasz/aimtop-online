@@ -190,5 +190,4 @@ $replace = [
     </div>
 
 
-    <?php require_once './src/components/footer.php'; ?>
 </body>
