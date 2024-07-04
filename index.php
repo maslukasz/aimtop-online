@@ -61,18 +61,11 @@ app()->get('/ra/hard', function () {
 app()->get('/blog/aimcademy-fps', function () {
     response()->page('./src/blog/aimacademy-fps.php');
 });
+;
 
 app()->get('/', function () {
-    response()->page('./welcome.html');
-});
-
-app()->get('/test', function () {
     response()->page('./src/home.php');
 });
-
-
-
-
 
 
 app()->run();
