@@ -48,7 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <div class="col-md-6">
                 <div class="card mt-5 bg-dark">
                     <div class="card-header text-center">
-                        <h3 class='text-info'>Login</h3>
+                        <h3 class='text-info'>Login <br>(if you want to test website - login: kolega password: kolega)
+                        </h3>
                         <?php if (isset($error)) { ?>
                             <p style="color: red;"><?php echo $error; ?></p>
                         <?php } ?>
