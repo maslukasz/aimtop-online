@@ -24,7 +24,7 @@
         <div class='container'>
 
             <h1 class='text-success text-center font-monospace mb-4'>aimtop</h1>
-            <p class="subtitle mb-5 fs-4"><strong class="text-primary"><a href='https://x.com/aimtop_hub'
+            <p class="subtitle mb-5 fs-4"><strong class="text-primary"><a href='https://x.com/aimtop_online'
                         target='_blank'>aimtop</a></strong> is a <i>non-profit project</i> where
                 <mark>passion plays a major role</mark>. We aim to help players
                 improve in FPS games. We do not intend to duplicate the efforts of existing aim groups. Instead, we
@@ -59,11 +59,11 @@
                         Benchmarks</p>
 
                     <div class="card-footer text-body-secondary">
-                        <p class="card-text"><small class="text-body-secondary"> <a href='/ra/s4-novice'
+                        <p class="card-text"><small class="text-body-secondary"> <a href='/vt/s4-novice'
                                     class="btn btn-success">Easy</a>
-                                <a href='/ra/s4-intermediate'><button type="button"
+                                <a href='/vt/s4-intermediate'><button type="button"
                                         class="btn btn-warning">Medium</button></a>
-                                <a href='/ra/s4-advanced'><button type="button"
+                                <a href='/vt/s4-advanced'><button type="button"
                                         class="btn btn-danger">Hard</button></a></small></p>
                     </div>
 
@@ -77,11 +77,10 @@
                             href="https://x.com/aimlab" target='_blank'>@Aimlabs</a> Benchmarks</p>
 
                     <div class="card-footer text-body-secondary">
-                        <p class="card-text"><small class="text-body-secondary"> <a href='/ra/s4-novice'
+                        <p class="card-text"><small class="text-body-secondary"> <a href='/ra/easy'
                                     class="btn btn-success">Easy</a>
-                                <a href='/ra/s4-intermediate'><button type="button"
-                                        class="btn btn-warning">Medium</button></a>
-                                <a href='/ra/s4-advanced'><button type="button"
+                                <a href='/ra/medium'><button type="button" class="btn btn-warning">Medium</button></a>
+                                <a href='/ra/hard'><button type="button"
                                         class="btn btn-danger">Hard</button></a></small></p>
                     </div>
                 </div>
@@ -101,8 +100,6 @@
         </div>
     </section>
 
-    <br>
-    <br>
     <br>
     <br>
 
@@ -136,5 +133,6 @@
         </blockquote>
     </section>
 
-
 </body>
+
+<?php require_once './src/components/footer.php'; ?>

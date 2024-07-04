@@ -108,12 +108,12 @@ $scores = [
 
 function save_rank($scenario, $score, $rank)
 {
-    $result = db()->select('vt_s4_advanced', $scenario, $scenario . '_rank')->fetchAll();
-
+    $scn_rank = $scenario . '_rank';
+    $result = db()->select('vt_s4_advanced', "{$scenario}, {$scn_rank}")->where('name', $_SESSION['name'])->fetchAssoc();
     if (empty($result)) {
-        db()->insert('vt_s4_advanced')->params(['name' => $_SESSION['name'], $scenario => $scenario, $scenario . '_rank' => $scenario . '_rank'])->execute();
+        db()->insert('vt_s4_advanced')->params(['name' => $_SESSION['name'], $scenario => $scenario, $scn_rank => $scn_rank])->execute();
     } else {
-        db()->update('vt_s4_advanced')->params([$scenario => $score, $scenario . '_rank' => $rank])->where('name', $_SESSION['name'])->execute();
+        db()->update('vt_s4_advanced')->params(["$scenario" => $score, $scn_rank => $rank])->where('name', $_SESSION['name'])->execute();
     }
 
     return $result;
@@ -139,8 +139,7 @@ foreach ($_GET as $response => $value) {
             $_SESSION[$response . '_rank'] = $scores[$response][4][1];
         }
     }
-};
-
+}
 
 foreach ($scenarios as $scene) {
     $q = db()->select('vt_s4_advanced', '*')->where('name', $_SESSION['name'])->fetchAssoc();
@@ -180,8 +179,11 @@ $replace = [
 
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
     <link rel='stylesheet' href='../public/old_styles/vt.scss'>
 
@@ -196,7 +198,10 @@ $replace = [
 
     <form method="GET" id="my_form" action="/vt/s4-advanced"></form>
     <div class='container'>
-        <span class='text-success'><a href='https://docs.google.com/spreadsheets/d/1qUzF2KHcfs_FgsaDFRfGsLgHhoC1Md5bzMOUbsYzSjg/' target='_blank'><button class='btn btn-dark'><i class=" bi bi-box-arrow-up-left"></i></button></a> Voltaic KvKs Benchmarks S4 - Advanced</span>
+        <span class='text-success'><a
+                href='https://docs.google.com/spreadsheets/d/1qUzF2KHcfs_FgsaDFRfGsLgHhoC1Md5bzMOUbsYzSjg/'
+                target='_blank'><button class='btn btn-dark'><i class=" bi bi-box-arrow-up-left"></i></button></a>
+            Voltaic KvKs Benchmarks S4 - Advanced</span>
         <table class='table table-bordered border-black' id='tab-content'>
             <tr class='table-primary'>
                 <th>Scenario</th>
@@ -205,7 +210,7 @@ $replace = [
                 <th>Rank</th>
             </tr>
 
-            <?php foreach ($scenarios as $scene) : ?>
+            <?php foreach ($scenarios as $scene): ?>
                 <tr class='table-dark'>
                     <td class='<?= $scores[$scene][1][2] ?>'><?= str_replace($scenarios, $replace, $scene) ?></td>
                     <td><input type="number" name='<?= $scene ?>' form="my_form" /></td>

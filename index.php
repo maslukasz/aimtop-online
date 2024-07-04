@@ -40,9 +40,19 @@ app()->get('/vt/s4-intermediate', function () {
 app()->get('/vt/s4-advanced', function () {
     response()->page('./src/benchmarks/vt/vt4_advanced.php');
 });
+app()->post('/vt/s4-advanced', function () {
+    response()->page('./src/benchmarks/vt/vt4_advanced.php');
+});
 
 
-app()->get('/ra', function () {
+// BENCHMARKS RA
+app()->get('/ra/easy', function () {
+    response()->page('./src/benchmarks/ra/al_easy.php');
+});
+app()->get('/ra/medium', function () {
+    response()->page('./src/benchmarks/ra/al_medium.php');
+});
+app()->get('/ra/hard', function () {
     response()->page('./src/benchmarks/ra/al_hard.php');
 });
 

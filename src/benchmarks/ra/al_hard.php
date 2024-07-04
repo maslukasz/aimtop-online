@@ -157,7 +157,8 @@ $scores = [
 
 function save_rank($scenario, $score, $rank)
 {
-    $result = db()->select('ra_aimlab_hard', $scenario, $scenario . '_rank')->fetchAll();
+    $scn_rank = $scenario . '_rank';
+    $result = db()->select('ra_aimlab_hard', "{$scenario}, {$scn_rank}")->where('name', $_SESSION['name'])->fetchAssoc();
 
     if (empty($result)) {
         db()->insert('ra_aimlab_hard')->params(['name' => $_SESSION['name'], $scenario => $scenario, $scenario . '_rank' => $scenario . '_rank'])->execute();
@@ -189,7 +190,8 @@ foreach ($_GET as $response => $value) {
             $_SESSION[$response . '_rank'] = $scores[$response][4][1];
         }
     }
-};
+}
+;
 
 foreach ($scenarios as $scene) {
     $q = db()->select('ra_aimlab_hard', '*')->where('name', $_SESSION['name'])->fetchAssoc();
@@ -227,10 +229,13 @@ $replace = [
 
 <<head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
-    <link rel='stylesheet' href='./public/old_styles/ra.scss'>
+    <link rel='stylesheet' href='../public/old_styles/ra.scss'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>rA x Aimlab Hard Benchmarks</title>
@@ -241,9 +246,11 @@ $replace = [
     <body class='bg-dark'>
 
 
-        <form method="GET" id="my_form" action="/ra"></form>
+        <form method="GET" id="my_form" action="/ra/hard"></form>
         <div class='container'>
-            <span class='text-success'><a href='https://steamcommunity.com/sharedfiles/filedetails/?id=2780064771' target='_blank'><button class='btn btn-dark'><i class="bi bi-box-arrow-up-left"></i></button></a>rA x Aimlab Hard Benchmarks</span>
+            <span class='text-success'><a href='https://steamcommunity.com/sharedfiles/filedetails/?id=2780064771'
+                    target='_blank'><button class='btn btn-dark'><i class="bi bi-box-arrow-up-left"></i></button></a>rA
+                x Aimlab Hard Benchmarks</span>
             <table class='table table-bordered border-black' id='tab-content'>
                 <tr class='table-primary'>
                     <th>Scenario</th>
@@ -252,7 +259,7 @@ $replace = [
                     <th>Rank</th>
                 </tr>
 
-                <?php foreach ($scenarios as $scene) : ?>
+                <?php foreach ($scenarios as $scene): ?>
                     <tr class='table-dark'>
                         <td class='<?= $scores[$scene][1][2] ?>'><?= str_replace($scenarios, $replace, $scene) ?></td>
                         <td><input type="number" name='<?= $scene ?>' form="my_form" /></td>

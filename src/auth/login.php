@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (!empty($r)) {
         echo '????';
         if (password_verify($password, $r['password'])) {
-            $_SESSION["user"] = $r["name"];
+            $_SESSION["name"] = $r["name"];
             echo 666;
             header('Location: /test');
             exit();
@@ -32,8 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 ?>
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
 </head>
@@ -58,7 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             </div>
                             <div class="form-group mb-3">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" name="password" placeholder="Wprowadź hasło">
+                                <input type="password" class="form-control" name="password"
+                                    placeholder="Wprowadź hasło">
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success">Login</button>
@@ -66,8 +70,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <small><a href="https://discord.gg/QJauGpg7zg" target="_blank"><button type="button" class="btn btn-primary">Discord</button></a></small>
-                        <small><a href="/auth/register"><button type="button" class="btn btn-danger">Register</button></a></small>
+                        <small><a href="https://discord.gg/QJauGpg7zg" target="_blank"><button type="button"
+                                    class="btn btn-primary">Discord</button></a></small>
+                        <small><a href="/auth/register"><button type="button"
+                                    class="btn btn-danger">Register</button></a></small>
                     </div>
                 </div>
             </div>
