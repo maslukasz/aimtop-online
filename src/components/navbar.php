@@ -8,7 +8,7 @@
 
 <nav class="navbar border-bottom">
     <div class="container-fluid">
-        <a href='/test'><span class="navbar-brand mb-0 h1"><button
+        <a href='/'><span class="navbar-brand mb-0 h1"><button
                     class='btn btn-dark text-success'>aimtop</button></span></a>
         <span class="navbar-text">
             <div class="buttons">
