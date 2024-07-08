@@ -75,4 +75,7 @@ app()->get('/materials', function () {
     response()->page('./src/pages/content/materials.php');
 });
 
+app()->get('/test', function () {
+    response()->page('./src/test.php');
+});
 app()->run();
