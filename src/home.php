@@ -3,8 +3,6 @@
 <?php require_once './src/components/navbar.php'; ?>
 
 <head>
-    <link rel='stylesheet' href="styles/layouts/index.scss">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -100,6 +98,29 @@
         </div>
     </section>
 
+    <br><br>
+
+    <section class='container section text-light mt-5'>
+        <h1 class='text-center border-bottom border-primary'>Content</h1>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            <div class="col ">
+                <div class="card h-100 bg-dark text-white border-3 border-success">
+                    <div class="card-body">
+                        <h5 class="card-title">Aim materials</h5>
+
+                    </div>
+
+                    <div class="card-footer text-center">
+                        <a class="btn btn-success" href="/materials">Teleport</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
     <br>
     <br>
 
@@ -109,7 +130,7 @@
 
         <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
             <div class="col ">
-                <div class="card h-100 bg-dark text-white border-3 border-success">
+                <div class="card h-100 bg-dark text-white border-3 border-primary">
                     <div class="card-body">
                         <h5 class="card-title">Aimcademy as a tool for FPS games training</h5>
 
@@ -127,9 +148,11 @@
 
     <section class="section">
         <blockquote>
-            From the author - the site is open-source. The code is not written by a professional. I run this project
+            From the author - the site is open-source. The code is not written by a professional. I run this
+            project
             as
-            a hobby, on the side. If there is ever any form of monetization, it will only be to cover hosting costs.
+            a hobby, on the side. If there is ever any form of monetization, it will only be to cover hosting
+            costs.
         </blockquote>
     </section>
 

@@ -67,5 +67,12 @@ app()->get('/', function () {
     response()->page('./src/home.php');
 });
 
+app()->get('/profile', function () {
+    response()->page('./src/profile.php');
+});
+
+app()->get('/materials', function () {
+    response()->page('./src/pages/content/materials.php');
+});
 
 app()->run();

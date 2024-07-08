@@ -3,3 +3,4 @@ sq.sqlite
 .vscode
 db.sqlite
 ./*.sqlite
+db.sqlite
