@@ -71,11 +71,20 @@ app()->get('/profile', function () {
     response()->page('./src/profile.php');
 });
 
-app()->get('/materials', function () {
-    response()->page('./src/pages/content/materials.php');
+app()->get('/al-materials', function () {
+    response()->page('./src/pages/content/aimlab-materials.php');
+});
+app()->get('/ab-materials', function () {
+    response()->page('./src/pages/content/aimbeast-materials.php');
 });
 
 app()->get('/test', function () {
     response()->page('./src/test.php');
 });
+
+
+
+
+
+
 app()->run();
