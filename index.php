@@ -82,9 +82,15 @@ app()->get('/test', function () {
     response()->page('./src/test.php');
 });
 
+app()->get('/settings', function () {
+    response()->page('./src/pages/settings.php');
+});
 
 
 
+app()->get('/ab-games', function () {
+    response()->page('./src/pages/games/aimbeast.php');
+});
 
 
 app()->run();

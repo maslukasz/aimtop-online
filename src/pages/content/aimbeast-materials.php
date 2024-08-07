@@ -17,6 +17,18 @@
     <div
       class="py-3 ml-5 mr-5 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
       Our materials</div>
+
+
+    <div class="grid grid-cols-1 gap-4 text-white lg:gap-8 mr-10 ml-10 lg:mr-40 lg:ml-40 mb-2">
+      <div
+        class="h-32 rounded-lg bg-gray-900 flex flex-col items-center justify-center shadow shadow-sm shadow-red-800">
+        <p><span class="text-red-600">Aimbeast</span> game-specific materials</p>
+        <a href='/ab-games'><button class="bg-red-400/50 h-8 w-32 rounded-full shadow-red-600/60 shadow-md"><i
+              class="bi bi-file-earmark-text"></i>
+            Read</button></a>
+      </div>
+    </div>
+
     <div class="ml-5 mr-5 text-center text-white">
       <p class="p-3 px-3">Right now, we only support <span class="text-red-500">Aimbeast</span>. Below are our
         playlists. If you want to play our scenarios, just type 'AIMTOP' in the scenarios browser. <br>
@@ -46,6 +58,73 @@
       </ul>
     </div>
 
+
+
+    <div
+      class="py-3 ml-5 mr-5 mt-5 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
+      Weakness specific</div>
+
+    <ul class="text-gray-200 list-none p-5"">
+      <p class=" p-3 px-3 text-green-400 font-bold text-2xl">Tracking collection</p>
+      <li id='ab-easy' class="inline hover:underline text-green-400">Green <span class='text-white'>- easy</span></li>
+      <li class="inline text-gray-100">|</li>
+      <li id="ab-medium" class="inline hover:underline text-orange-300">Orange <span class='text-white'>-
+          medium</span>
+      </li>
+      </li>
+      <li class=" inline text-gray-100">|</li>
+      <li id='ab-hard' class="inline hover:underline text-red-400">Red <span class='text-white'>- hard</span></li>
+      </li>
+    </ul>
+
+
+    <div id="ab-easy-content" class="hidden">
+      <ul class="border border-green-500 border-solid p-3 mb-5 ml-5 mr-5 list-disc list-inside">
+        <li>We strongly recommend the new Aimbeast ranked playlist
+          (S2). There are amazing
+          scenarios in the beginner
+          section, which are good for starting out.</li>
+        <li>Aimbeast beginner - tracking [<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3124718541"
+            target="_blank"><span class='text-blue-400 hover:underline'>STEAM</span></a>]</li>
+
+      </ul>
+    </div>
+
+    <div id="ab-medium-content" class="hidden">
+      <ul class="border border-orange-500 border-solid p-3 mb-5  ml-5 mr-5 list-disc list-inside">
+        <li>Dynamic clicking compilation [<a
+            href="https://steamcommunity.com/sharedfiles/filedetails/?id=2974405085&searchtext=dynamic"
+            target="_blank"><span class='text-blue-400 hover:underline'>STEAM</span></a>]</li </ul>
+    </div>
+
+    <div id="ab-hard-content" class="hidden">
+      <ul class="border border-red-500 border-solid p-3 mb-5  ml-5 mr-5">
+        <li>TODO</li>
+
+      </ul>
+    </div>
+    <!-- 
+    <ul class="text-gray-200 list-none p-5 mt-5"">
+      <p class=" p-3 px-3 text-green-400 font-bold text-2xl">Clicking collection</p>
+      <li id='ab-easy' class="inline hover:underline text-green-400">Static</li>
+      <li class="inline text-gray-100">|</li>
+      <li id="ab-medium" class="inline hover:underline text-orange-300">Dynamic</li>
+    </ul>
+
+    <div id="ab-static-content" class="hidden">
+      <ul class="border border-orange-500 border-solid p-3 mb-5  ml-5 mr-5 list-disc list-inside">
+        <li>aimtop flick correction [<a
+            href="https://steamcommunity.com/sharedfiles/filedetails/?id=3155306935&searchtext=aimtop"
+            target="_blank"><span class='text-blue-400 hover:underline'>STEAM</span></a>]</li </ul>
+    </div>
+
+    <div id="ab-dynamic-content" class="hidden">
+      <ul class="border border-red-500 border-solid p-3 mb-5  ml-5 mr-5">
+        <li>TODO</li>
+
+      </ul>
+    </div -->
+
     <div class="flex mt-10 mr-10 ml-10 p-5 text-center border border-red-600 bg-gray-900">
       <div class="flex justify-center">
         <span>At this moment, we don't plan to make materials for Aimlab or KovaaK's. We feel most
@@ -67,50 +146,6 @@
             please contact us on <a class="text-[#7289da] font-extrabold" href="https://discord.gg/QJauGpg7zg"
               target="_blank">Discord</a>.</span></span>
       </div>
-    </div>
-
-    <div
-      class="py-3 ml-5 mr-5 mt-5 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">
-      Weakness specific</div>
-
-    <ul class="text-gray-200 list-none p-5"">
-      <p class=" p-3 px-3 text-green-400 font-bold text-2xl">Tracking collection</p>
-      <li id='ab-easy' class="inline hover:underline text-green-400">Green <span class='text-white'>- easy</span></li>
-      <li class="inline text-gray-100">|</li>
-      <li id="ab-medium" class="inline hover:underline text-orange-300">Orange <span class='text-white'>- medium</span>
-      </li>
-      </li>
-      <li class=" inline text-gray-100">|</li>
-      <li id='ab-hard' class="inline hover:underline text-red-400">Red <span class='text-white'>- hard</span></li>
-      </li>
-    </ul>
-
-
-    <div id="ab-easy-content" class="hidden">
-      <ul class="border border-green-500 border-solid p-3 mb-5 ml-5 mr-5 list-disc list-inside gap-3">
-        <li>We strongly recommend the new Aimbeast ranked playlist
-          (S2). There are amazing
-          scenarios in the beginner
-          section, which are good for starting out.</li>
-        <li><i class="bi bi-caret-right"></i>Aimbeast beginner - tracking [<a
-            href="https://steamcommunity.com/sharedfiles/filedetails/?id=3124718541" target="_blank"><span
-              class='text-blue-400 hover:underline'>STEAM</span></a>]</li>
-
-      </ul>
-    </div>
-
-    <div id="ab-medium-content" class="hidden">
-      <ul class="border border-orange-500 border-solid p-3 mb-5  ml-5 mr-5">
-        <li>TODO</li>
-
-      </ul>
-    </div>
-
-    <div id="ab-hard-content" class="hidden">
-      <ul class="border border-red-500 border-solid p-3 mb-5  ml-5 mr-5">
-        <li>TODO</li>
-
-      </ul>
     </div>
 
     <script src="./public/js/materials.js"></script>
