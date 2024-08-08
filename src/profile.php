@@ -3,7 +3,6 @@
 require './src/classes/User.php';
 
 $u = new User(trim($_SERVER['REQUEST_URI'], '/u/'));
-$user = $u->logged($_SESSION['name']);
 
 $socials = $u->getSocials($u->name);
 $about = $u->getAbout($u->name);
