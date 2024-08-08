@@ -1,7 +1,9 @@
 <?php
 require_once './src/classes/User.php';
 
-$u = new User($_SESSION['name']);
+if (isset($_SESSION['name'])) {
+    $u = new User($_SESSION['name']);
+}
 
 ?>
 
