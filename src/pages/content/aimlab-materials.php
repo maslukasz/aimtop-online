@@ -23,7 +23,7 @@
 
         <div id="vt-content" class="hidden">
             <ul class="border border-purple-500 border-solid p-3 ml-5 mr-5">
-                <li><a href="https://discord.gg/voltaic" target="_blank" class="text-[#2bded9] hover:underline">
+                <li><a href="https://discord.gg/voltaic" target="_blank" class="text-[#7289da] hover:underline">
                         Discord server</a>
                     (all resources are available there)</li>
                 <li><a href='https://app.voltaic.gg/' target="_blank" class="hover:underline">Main
@@ -43,8 +43,8 @@
 
         <div id="ra-content" class="hidden">
             <ul class="border border-solid border-[#db1d1e] p-3 ml-5 mr-5">
-                <li><a href='https://discord.gg/revosect' target='_blank' class='hover:border text-[#db1d1e]'>Server
-                        discord</a> (all resources are available
+                <li><a href='https://discord.gg/revosect' target='_blank' class='hover:border text-[#7289da]'>Discord
+                        server</a> (all resources are available
                     there)</li>
                 <li><a href="https://bit.ly/ALbenchmarks" class="hover:underline" target="_blank">Aimlabs
                         Benchmarks</a> or <a href="/" class="text-green-400 hover:underline">on the our home

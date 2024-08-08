@@ -6,7 +6,7 @@
 
 <?php require_once './src/components/navbar.php'; ?>
 
-<body class="bg-[#101728] text-white" style="padding-left: 15%; padding-right: 15%;">
+<body class="bg-gray-800 text-white" style="padding-left: 15%; padding-right: 15%;">
 
     <!--     <section class="container flex flex-col mt-20 ml-10 mr-10 ">
         <h2 class="text-green-300 text-3xl">Teleport to the section you want</h2>

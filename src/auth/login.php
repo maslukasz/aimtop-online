@@ -17,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         echo '????';
         if (password_verify($password, $r['password'])) {
             $_SESSION["name"] = $r["name"];
-            echo 666;
             header('Location: /');
             exit();
         } else {

@@ -85,6 +85,9 @@ app()->get('/test', function () {
 app()->get('/settings', function () {
     response()->page('./src/pages/settings.php');
 });
+app()->post('/settings', function () {
+    response()->page('./src/pages/settings.php');
+});
 
 
 

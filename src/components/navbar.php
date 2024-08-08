@@ -33,10 +33,15 @@
                         <span>Register</span>
                     </button></a>
             <?php else: ?>
-                <button class="px-4 py-2 bg-green-500 hover:bg-green-600 text-gray-50 rounded-xl flex items-center gap-2"
-                    disabled>
-                    <span>Profile (soon)</span>
-                </button>
+                <a href='/profile'><button
+                        class="px-4 py-2 bg-green-500 hover:bg-green-600 text-gray-50 rounded-xl flex items-center gap-2">
+                        <span>Profile</span>
+                    </button></a>
+
+                <a href='/settings'><button
+                        class="px-4 py-2 bg-blue-500 hover:bg-green-600 text-gray-50 rounded-xl flex items-center gap-2">
+                        <span>Settings</span>
+                    </button></a>
             <?php endif; ?>
         </div>
     </div>

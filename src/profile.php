@@ -8,53 +8,77 @@ $user = $u->logged($_SESSION['name']);
 
 $socials = $u->getSocials($u->name);
 $about = $u->getAbout($u->name);
-
-print_r($about);
-
+$ab_rank = $u->getAimbeastRank($u->name);
+$ab2_rank = $u->getAimbeastRank2($u->name);
 
 ?>
 
 <head>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
 
-<body class="bg-[#001e26]">
-    <div class="container rounded-3xl mx-auto px-6 bg-[#001318] mt-20 mb-20">
-        <div class="flex justify-center text-slate-300 min-h-screen">
-            <div class="p10 mt-5 text-center">
-                <h1 class="text-3xl"><?= $u->name ?></h1>
-                <ul class="flex flex-row gap-3 ">
+<body class="bg-gray-800 flex flex-col items-center justify-center mx-auto md:mt-4">
+    <!-- relative flex flex-col items-center px-4 pb-8 text-center sm:px-6 pt-10 -->
+    <div class="rounded-lg shadow-xl md:border md:px-4 md:py-8 sm:px-0 sm:py-0 md:border-gray-700">
+        <div class="flex justify-center text-slate-300">
+            <div class="p-10 mt-5 text-center">
+                <h1 class="text-4xl"><?= $u->name ?></h1>
 
-                    <?php if (!empty($socials['twitter'])): ?>
-                        <li class="mt-5"> <a href="https://x.com/<?= $socials['twitter'] ?>"> <i
-                                    class="bi bi-twitter-x"></i></a></li>
-                    <?php endif; ?>
-
-                    <?php if (!empty($socials['youtube'])): ?>
-                        <li class="mt-5"> <a href="<?= $socials['youtube'] ?>"> <i class="bi bi-youtube"></i></li>
-                    <?php endif; ?>
-
+                <ul class="flex justify-center gap-3">
                     <?php if (!empty($socials['discord'])): ?>
                         <li title=<?= $socials['discord'] ?> class="mt-5"> <i class="bi bi-discord"></i></a>
                         </li>
                     <?php endif; ?>
 
+                    <?php if (!empty($socials['twitter'])): ?>
+                        <li class="mt-5"> <a href="https://x.com/<?= $socials['twitter'] ?>" target="_blank"> <i
+                                    class="bi bi-twitter-x"></i></a></li>
+                    <?php endif; ?>
 
+                    <?php if (!empty($socials['youtube'])): ?>
+                        <li class="mt-5"> <a href="<?= $socials['youtube'] ?>"> <i class="bi bi-youtube"></i></a></li>
+                    <?php endif; ?>
                 </ul>
 
+                <div class="container shadow-md p-4 pt-2 rounded bg-gray-900/40 mt-10">
+                    <p class="font-extrabold font-mono mb-2 text-xl">ABOUT ME</p>
+                    <?php if (!empty($about)): ?>
+                        <p><?= htmlspecialchars($about) ?></p>
+                    <?php else: ?>
+                        <p class="text-lg">No about me</p>
+                    <?php endif; ?>
 
-                <div class="p-10 my-5">About me</div>
-                <?php if (!empty($about)): ?>
-                    <p class="text-lg text-w"><?= $about ?></p>
-                <?php else: ?>
-                    <p class="text-lg">No about me</p>
-                <?php endif; ?>
+                </div>
+
+                <div class="container shadow-md p-4 pt-2 rounded bg-gray-900/40 mt-10">
+                    <div class="grid grid-cols-2 sm:grid-cols-1 gap-6 md:grid-flow-col">
+                        <div class="bg-gray-600/50 p-4 rounded">
+
+                            <?php if ($ab_rank != 'N/A'): ?>
+                                <p class="font-extrabold font-mono mb-2 text-xl">Aimbeast Season 1 rank
+                                <p>
+                                <p><?= $ab_rank ?>
+                                <p>
+                                <?php endif; ?>
+                        </div>
+
+                        <div class="bg-gray-600/50 p-4 rounded">
+                            <?php if ($ab2_rank != 'N/A'): ?>
+                                <p class="font-extrabold font-mono mb-2 text-xl">Aimbeast Season 2 rank
+                                <p>
+                                <p> <?= $ab2_rank ?></p>
+                            <?php endif; ?>
+                        </div>
 
 
+
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
 
 </body>

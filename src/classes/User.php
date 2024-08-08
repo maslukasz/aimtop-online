@@ -12,7 +12,6 @@ class UserRepo
 
     public function get(string $name, string $password)
     {
-        echo 'huj';
         $query = db()->select('users', '*')->where('name', $name, )->fetchAssoc();
         print_r($query);
         if (!empty($query)) {
@@ -33,6 +32,7 @@ class User
     public string $twitter;
     public string $youtube;
     public string $discord;
+    public string $nationality;
     public string $about;
 
     public function __construct(string $name)
@@ -40,7 +40,7 @@ class User
         $this->name = $name;
     }
 
-    public function logged(string $name)
+    public function logged(string $name): bool
     {
         if (!isset($_SESSION['name'])) {
             header('Location: /auth/login');
@@ -60,8 +60,17 @@ class User
     {
         $query = db()->select('users', 'about')->where('name', $name)->fetchAssoc();
         return $query['about'];
-
     }
 
+    public function getAimbeastRank($name)
+    {
+        $query = db()->select('users', 'ab_rank')->where('name', $name)->fetchAssoc();
+        return $query['ab_rank'];
+    }
 
+    public function getAimbeastRank2($name)
+    {
+        $query = db()->select('users', 'ab2_rank')->where('name', $name)->fetchAssoc();
+        return $query['ab2_rank'];
+    }
 }
