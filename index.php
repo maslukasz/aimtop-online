@@ -9,7 +9,10 @@ db()->connect([
     'dbname' => 'db.sqlite',
 ]);
 
-
+// 404
+app()->set404(function () {
+    response()->page('./public/static/404.html');
+});
 
 // REGISTER - LOGIN
 app()->get('/auth/register', function () {
@@ -67,8 +70,12 @@ app()->get('/', function () {
     response()->page('./src/home.php');
 });
 
-app()->get('/profile', function () {
-    response()->page('./src/profile.php');
+app()->get('/u/{user}', function ($user) {
+    $v = db()->select('users', 'name')->where('name', $user)->fetchAssoc();
+    if (!empty($v)) {
+        response()->page('./src/profile.php');
+    } else
+        response()->redirect('/404');
 });
 
 app()->get('/al-materials', function () {

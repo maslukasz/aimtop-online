@@ -1,3 +1,10 @@
+<?php
+require_once './src/classes/User.php';
+
+$u = new User($_SESSION['name']);
+
+?>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,7 +40,7 @@
                         <span>Register</span>
                     </button></a>
             <?php else: ?>
-                <a href='/profile'><button
+                <a href='/u/<?= $u->name; ?>'><button
                         class="px-4 py-2 bg-green-500 hover:bg-green-600 text-gray-50 rounded-xl flex items-center gap-2">
                         <span>Profile</span>
                     </button></a>
