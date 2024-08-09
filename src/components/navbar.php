@@ -27,7 +27,6 @@ if (isset($_SESSION['name'])) {
                         target="_blank">Discord</a></li>
                 <li class="md:px-4 md:py-2 hover:text-white"><a href="https://x.com/aimtop_online"
                         target="_blank">Twitter</a></li>
-                <li class="md:px-4 md:py-2 hover:text-green-400"><a href="/">Explore</a></li>
                 <li class="md:px-4 md:py-2 hover:text-red-600"><a href="/ab-materials">Aimbeast</a></li>
             </ul>
         </div>
