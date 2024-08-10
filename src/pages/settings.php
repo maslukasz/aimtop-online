@@ -153,9 +153,7 @@ if (!empty($_POST['about'])) {
                         <option value="Gold 1">Gold 1</option>
                         <option value="Gold 2">Gold 2</option>
                         <option value="Gold 3">Gold 3</option>
-                        <option class="bg-[url('../../../public/img/plat1.png')]" value="Platinum 1"><span
-                                class="bg-[url('../../../public/img/plat1.png')]"> </span> Platinum
-                            1</option>
+                        <option value="Platinum 1">Platinum 1</option>
                         <option value="Platinum 2">Platinum 2</option>
                         <option value="Platinum 3">Platinum 3</option>
                         <option value="Diamond 1">Diamond 1</option>
