@@ -1,6 +1,6 @@
 <?php
 
-require './src/classes/User.php';
+require_once './src/components/navbar.php';
 
 $u = new User(trim($_SERVER['REQUEST_URI'], '/u/'));
 
@@ -11,11 +11,9 @@ $ab2_rank = $u->getAimbeastRank2($u->name);
 
 ?>
 
-<?php require_once './src/components/navbar.php'; ?>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/css/output.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>

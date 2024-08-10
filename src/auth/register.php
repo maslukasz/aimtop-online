@@ -1,5 +1,7 @@
 <?php
 
+$error = '';
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $data = request()->get([
         'name',
@@ -10,9 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $password = $_POST["password"];
 
     $r = db()->select('users', '*')->where('name', $name)->fetchAssoc();
-    print_r($r);
+
     if (!empty($r)) {
-        $error = 'User with this name already exists';
+        $error = 'User with this name already exists.';
     } else {
         db()->insert('users')->params(['name' => $name, 'password' => password_hash($password, PASSWORD_DEFAULT)])->execute();
         header('Location: /auth/login');
@@ -22,45 +24,43 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 ?>
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Register</title>
+    <link rel="stylesheet" href="../../public/css/output.css">
+    <title>Register - aimtop</title>
 </head>
 
-<body class='bg-black'>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card mt-5 bg-dark">
-                    <div class="card-header text-center">
-                        <h3 class='text-info'>Register</h3>
-                        <?php if (isset($error)) { ?>
-                            <p style="color: red;"><?php echo $error; ?></p>
-                        <?php } ?>
+<body class='bg-gray-800 flex flex-col items-center justify-center mt-10'>
+    <div class="flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-white text-gray-800">
+        <div class="mb-8 text-center">
+            <h1 class="my-3 text-4xl font-bold">Register</h1>
+        </div>
+        <form method="POST" action="/auth/register" class="space-y-12">
+            <div class="space-y-4">
+                <div>
+                    <label for="name" class="block mb-2 text-sm">Username</label>
+                    <input type="text" name="name" id="name" placeholder="mluki"
+                        class="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800">
+                </div>
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <label for="password" class="text-sm">Password</label>
                     </div>
-                    <div class="card-body">
-                        <form method='post' action='/auth/register/'>
-                            <div class="form-group mb-3">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" name="name" placeholder="Your username">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" name="password" placeholder="Your password">
-                            </div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-success">Register</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="card-footer text-center">
-                        <small><a href="https://discord.gg/QJauGpg7zg" target="_blank"><button type="button" class="btn btn-primary">Discord</button></a></small>
-                        <small><a href="/auth/login"><button type="button" class="btn btn-danger">Login</button></a></small>
-                    </div>
+                    <input type="password" name="password" id="password" placeholder="*****"
+                        class="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800">
                 </div>
             </div>
-        </div>
+            <div class="space-y-2">
+                <div>
+                    <button type="submit"
+                        class="w-full px-8 py-3 font-semibold rounded-md dark:bg-green-600 dark:text-gray-50">Sign
+                        up</button>
+                </div>
+                <p class="px-6 text-sm text-center dark:text-gray-600">Already have an account?
+                    <a rel="noopener noreferrer" href="/auth/login" class="hover:underline dark:text-green-600">Sign
+                        in</a>.
+                </p>
+            </div>
+        </form>
+        <span class="text-red-600 font-semibold"><?= $error ?></span>
     </div>
-
-</body>
+</body>>

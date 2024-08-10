@@ -9,20 +9,17 @@ if (isset($_SESSION['name'])) {
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/css/output.css">
+    <link rel="stylesheet" href="../../public/css/output.css">
 </head>
-
 
 <nav class="bg-gray-900 mt-1.5 rounded-xl mr-2 ml-2 shadow shadow-black-300 w-100 px-8 md:px-auto">
     <div class="md:h-16 h-28 mx-auto md:px-4 container flex items-center justify-between flex-wrap md:flex-nowrap">
-        <!-- Logo -->
         <div class="text-green-500 md:order-1">
             <a href='/'><span>aimtop</span></a>
         </div>
+
         <div class="text-gray-500 order-3 w-full md:w-auto md:order-2">
             <ul class="flex font-semibold justify-between">
-                <!-- Active Link = text-indigo-500
-                Inactive Link = hover:text-indigo-500 -->
                 <li class="md:px-4 md:py-2 hover:text-[#7289da]"><a href="https://discord.gg/QJauGpg7zg"
                         target="_blank">Discord</a></li>
                 <li class="md:px-4 md:py-2 hover:text-white"><a href="https://x.com/aimtop_online"
@@ -30,6 +27,7 @@ if (isset($_SESSION['name'])) {
                 <li class="md:px-4 md:py-2 hover:text-red-600"><a href="/ab-materials">Aimbeast</a></li>
             </ul>
         </div>
+
         <div class="order-2 md:order-3 flex flex-row gap-2">
             <?php if (!isset($_SESSION['name'])): ?>
                 <a href="/auth/login"><button

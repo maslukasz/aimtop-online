@@ -1,17 +1,13 @@
-<?php require './src/classes/User.php'; ?>
-
-<?php require_once './src/components/navbar.php'; ?>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./public/css/output.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>aimtop [alpha]</title>
 
 </head>
 
+<?php require_once './src/components/navbar.php'; ?>
+
 <body class='bg-gray-800'>
-    <section class='text-gray-300 mt-5 flex justify-center mt-8 mb-20'>
+    <section class='text-gray-300 flex justify-center mt-8 mb-20'>
         <div class='container flex flex-col text-2xl mt-20 ml-10 mr-10 '>
 
 
@@ -38,23 +34,24 @@
         <span class="relative z-10 bg-gray-800 px-6 text-yellow-300">Our content</span>
     </span>
 
-
     <div class="grid md:grid-cols-3 grid-cols-1 gap-4 text-white lg:gap-8 mr-10 ml-10 lg:mr-40 lg:ml-40">
         <div
-            class="h-32 rounded-lg bg-gray-900 flex flex-col gap-2 items-center justify-center shadow shadow-sm shadow-red-800">
+            class="h-32 rounded-lg bg-gray-900 flex flex-col gap-2 items-center justify-center shadow-sm shadow-red-800">
             <p><span class="text-red-600">Aimbeast</span> materials</p>
             <a href='/ab-materials'><button class="bg-red-400/50 h-8 w-32 rounded-full shadow-red-600/60 shadow-md">
                     📄 Read</button></a>
         </div>
+
         <div
-            class="h-32 rounded-lg bg-gray-900 flex flex-col gap-2 items-center justify-center shadow shadow-sm shadow-red-800">
+            class="h-32 rounded-lg bg-gray-900 flex flex-col gap-2 items-center justify-center shadow-sm shadow-red-800">
             <p><span class="text-orange-500">KovaaK's</span> materials</p>
             <a href='/kvk-materials'><button class="bg-orange-400/50 h-8 w-32 rounded-full shadow-red-600/60 shadow-md">
                     <!-- <i class="bi bi-file-earmark-text"></i> -->
                     📄 Read</button></a>
         </div>
+
         <div
-            class="h-32 rounded-lg bg-gray-900 flex flex-col gap-2 items-center justify-center shadow shadow-sm shadow-teal-800">
+            class="h-32 rounded-lg bg-gray-900 flex flex-col gap-2 items-center justify-center shadow-sm shadow-teal-800">
             <p><span class="text-teal-500">Aimlab</span> materials</p>
             <a href="/al-materials"><button class="bg-teal-300/50 h-8 w-32 rounded-full shadow-teal-500/60 shadow-md">
                     📄 Read</button></a>
@@ -116,8 +113,7 @@
                 class="h-32 rounded-lg flex flex-col justify-center items-center bg-gray-900 text-gray-200 shadow-md hover:shadow-lg shadow-red-500/50 hover:shadow-green-500/50">
                 <h1 class="card-text"><a href="https://x.com/Revosect" target='_blank'
                         class="text-red-400 hover:underline">@Revosect</a> Benchmarks</h1>
-                <span
-                    class="whitespace-nowrap rounded-full bg-teal-500 px-2.5 py-0.5 text-sm text-black text-white">Aimlab</span>
+                <span class="whitespace-nowrap rounded-full bg-teal-500 px-2.5 py-0.5 text-sm text-white">Aimlab</span>
 
                 <span class="inline-flex -space-x-px overflow-hidden rounded-md border shadow-sm mt-2 mb-2">
                     <a href="/ra/easy">
@@ -140,7 +136,6 @@
         </div>
     </section>
 
-
     <section class="flex flex-col justify-center items-center text-white mt-10 p-2">
         <div class="border border-green-200 p-4 items-center">If
             you want to
@@ -156,15 +151,4 @@
             some valuable playlists, we'd appreciate it if you could share them with us.
         </div>
     </section>
-
-
-    <br>
-    <br>
-    <section class="section mr-10 ml-10 text-white bg-gray-900">
-        From the author - the site is open-source. The code is not written by a professional. I run this
-        project as a hobby, on the side. If there is ever any form of monetization, it will only be to cover hosting
-        costs.
-    </section>
-
-
 </body>
