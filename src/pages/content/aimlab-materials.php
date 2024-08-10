@@ -13,11 +13,11 @@
     <div class="text-center text-white mt-5">
         <h1 class="pt-5 pb-5 font-bold text-4xl">Aim groups materials</h1>
         <p class="p-3 px-3">Qualified aim materials that help you progress, made by aim groups.</p>
-        <ul class="text-gray-200 list-none p-5"">
-            <li class=" inline text-purple-400"><button id='vt-toggle'">Voltaic</button></li>
+        <ul class="text-gray-200 list-none p-5">
+            <li class=" inline text-purple-400"><button id='vt-toggle'>Voltaic</button></li>
             <li class=" inline text-gray-100 animate-bounce">|</li>
-                <li class="inline text-[#db1d1e] hover:underline"><button id="ra-toggle">Revosect</button>
-                </li>
+            <li class="inline text-[#db1d1e] hover:underline"><button id="ra-toggle">Revosect</button>
+            </li>
         </ul>
 
 

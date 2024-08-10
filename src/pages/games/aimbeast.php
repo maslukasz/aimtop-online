@@ -1,6 +1,5 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 
@@ -67,7 +66,7 @@
                                     href='https://steamcommunity.com/sharedfiles/filedetails/?id=3303683919'
                                     class="text-blue-300 hover:text-blue-400">[STEAM]</a></li>
 
-                            <li>AIMTOP FLICK CORRECTION (as a additionall playlist) <a target='blank'
+                            <li>AIMTOP FLICK CORRECTION <a target='blank'
                                     href='https://steamcommunity.com/sharedfiles/filedetails/?id=3155306935'
                                     class="text-blue-300 hover:text-blue-400">[STEAM]</a></li>
                         </ul>

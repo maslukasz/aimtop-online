@@ -85,6 +85,10 @@ app()->get('/ab-materials', function () {
     response()->page('./src/pages/content/aimbeast-materials.php');
 });
 
+app()->get('/kvk-materials', function () {
+    response()->page('./src/pages/content/kovaak-materials.php');
+});
+
 app()->get('/test', function () {
     response()->page('./src/test.php');
 });

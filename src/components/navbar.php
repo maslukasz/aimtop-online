@@ -9,7 +9,7 @@ if (isset($_SESSION['name'])) {
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./public/css/output.css">
 </head>
 
 
