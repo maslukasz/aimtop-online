@@ -6,8 +6,187 @@ $u = new User(trim($_SERVER['REQUEST_URI'], '/u/'));
 
 $socials = $u->getSocials($u->name);
 $about = $u->getAbout($u->name);
+
 $ab_rank = $u->getAimbeastRank($u->name);
+$ab_rank_icon = '';
+$ab_rank_color = '';
+
 $ab2_rank = $u->getAimbeastRank2($u->name);
+$ab2_rank_icon = '';
+$ab2_rank_color = '';
+
+switch ($ab_rank) {
+    case 'Bronze 1':
+        $ab_rank_icon = '../public/img/bronze1.png';
+        $ab_rank_color = 'text-yellow-700';
+        break;
+    case 'Bronze 2':
+        $ab_rank_icon = '../public/img/bronze2.png';
+        $ab_rank_color = 'text-yellow-700';
+        break;
+    case 'Bronze 3':
+        $ab_rank_icon = '../public/img/bronze3.png';
+        $ab_rank_color = 'text-yellow-700';
+        break;
+
+    case 'Silver 1':
+        $ab_rank_icon = '../public/img/silver1.png';
+        $ab_rank_color = 'text-gray-400';
+        break;
+    case 'Silver 2':
+        $ab_rank_icon = '../public/img/silver2.png';
+        $ab_rank_color = 'text-gray-400';
+        break;
+    case 'Silver 3':
+        $ab_rank_icon = '../public/img/silver3.png';
+        $ab_rank_color = 'text-gray-400';
+        break;
+
+    case 'Gold 1':
+        $ab_rank_icon = '../public/img/gold1.png';
+        $ab_rank_color = 'text-yellow-300';
+        break;
+    case 'Gold 2':
+        $ab_rank_icon = '../public/img/gold2.png';
+        $ab_rank_color = 'text-yellow-300';
+        break;
+    case 'Gold 3':
+        $ab_rank_icon = '../public/img/gold3.png';
+        $ab_rank_color = 'text-yellow-300';
+        break;
+
+    case 'Platinum 1':
+        $ab_rank_icon = '../public/img/plat1.png';
+        $ab_rank_color = 'text-blue-200';
+        break;
+    case 'Platinum 2':
+        $ab_rank_icon = '../public/img/plat2.png';
+        $ab_rank_color = 'text-blue-200';
+        break;
+    case 'Platinum 3':
+        $ab_rank_icon = '../public/img/plat3.png';
+        $ab_rank_color = 'text-blue-200';
+        break;
+
+    case 'Diamond 1':
+        $ab_rank_icon = '../public/img/diam1.png';
+        $ab_rank_color = 'text-sky-300';
+        break;
+    case 'Diamond 2':
+        $ab_rank_icon = '../public/img/diam2.png';
+        $ab_rank_color = 'text-sky-300';
+        break;
+    case 'Diamond 3':
+        $ab_rank_icon = '../public/img/diam3.png';
+        $ab_rank_color = 'text-sky-300';
+        break;
+
+    case 'Master 1':
+        $ab_rank_icon = '../public/img/master1.png';
+        $ab_rank_color = 'text-green-400';
+        break;
+    case 'Master 2':
+        $ab_rank_icon = '../public/img/master2.png';
+        $ab_rank_color = 'text-green-400';
+        break;
+    case 'Master 3':
+        $ab_rank_icon = '../public/img/master3.png';
+        $ab_rank_color = 'text-green-400';
+        break;
+
+    case 'Grandmaster':
+        $ab_rank_icon = '../public/img/grandmaster.png';
+        $ab_rank_color = 'text-red-500';
+        break;
+}
+;
+
+switch ($ab2_rank) {
+    case 'Bronze 1':
+        $ab2_rank_icon = '../public/img/bronze1.png';
+        $ab2_rank_color = 'text-yellow-700';
+        break;
+    case 'Bronze 2':
+        $ab2_rank_icon = '../public/img/bronze2.png';
+        $ab2_rank_color = 'text-yellow-700';
+        break;
+    case 'Bronze 3':
+        $ab2_rank_icon = '../public/img/bronze3.png';
+        $ab2_rank_color = 'text-yellow-700';
+        break;
+
+    case 'Silver 1':
+        $ab2_rank_icon = '../public/img/silver1.png';
+        $ab2_rank_color = 'text-gray-400';
+        break;
+    case 'Silver 2':
+        $ab2_rank_icon = '../public/img/silver2.png';
+        $ab2_rank_color = 'text-gray-400';
+        break;
+    case 'Silver 3':
+        $ab2_rank_icon = '../public/img/silver3.png';
+        $ab2_rank_color = 'text-gray-400';
+        break;
+
+    case 'Gold 1':
+        $ab2_rank_icon = '../public/img/gold1.png';
+        $ab2_rank_color = 'text-yellow-300';
+        break;
+    case 'Gold 2':
+        $ab2_rank_icon = '../public/img/gold2.png';
+        $ab2_rank_color = 'text-yellow-300';
+        break;
+    case 'Gold 3':
+        $ab2_rank_icon = '../public/img/gold3.png';
+        $ab2_rank_color = 'text-yellow-300';
+        break;
+
+    case 'Platinum 1':
+        $ab2_rank_icon = '../public/img/plat1.png';
+        $ab2_rank_color = 'text-blue-200';
+        break;
+    case 'Platinum 2':
+        $ab2_rank_icon = '../public/img/plat2.png';
+        $ab2_rank_color = 'text-blue-200';
+        break;
+    case 'Platinum 3':
+        $ab2_rank_icon = '../public/img/plat3.png';
+        $ab2_rank_color = 'text-blue-200';
+        break;
+
+    case 'Diamond 1':
+        $ab2_rank_icon = '../public/img/diam1.png';
+        $ab2_rank_color = 'text-sky-300';
+        break;
+    case 'Diamond 2':
+        $ab2_rank_icon = '../public/img/diam2.png';
+        $ab2_rank_color = 'text-sky-300';
+        break;
+    case 'Diamond 3':
+        $ab2_rank_icon = '../public/img/diam3.png';
+        $ab2_rank_color = 'text-sky-300';
+        break;
+
+    case 'Master 1':
+        $ab2_rank_icon = '../public/img/master1.png';
+        $ab2_rank_color = 'text-green-400';
+        break;
+    case 'Master 2':
+        $ab2_rank_icon = '../public/img/master2.png';
+        $ab2_rank_color = 'text-green-400';
+        break;
+    case 'Master 3':
+        $ab2_rank_icon = '../public/img/master3.png';
+        $ab2_rank_color = 'text-green-400';
+        break;
+
+    case 'Grandmaster':
+        $ab2_rank_icon = '../public/img/grandmaster.png';
+        $ab2_rank_color = 'text-red-500';
+        break;
+}
+;
+
 
 ?>
 
@@ -52,33 +231,32 @@ $ab2_rank = $u->getAimbeastRank2($u->name);
 
                     </div>
 
-                    <div class="container shadow-md p-4 pt-2 rounded bg-gray-900/40 mt-10">
-                        <div class="grid grid-cols-2 sm:grid-cols-1 gap-6 md:grid-flow-col">
-                            <div class="bg-gray-600/50 p-4 rounded">
-
+                    <?php if ($ab_rank != 'N/A' || $ab2_rank != 'N/A'): ?>
+                        <div class="container shadow-md p-4 pt-2 rounded bg-gray-900/40 mt-10">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:grid-flow-col">
                                 <?php if ($ab_rank != 'N/A'): ?>
-                                    <p class="font-extrabold font-mono mb-2 text-xl">Aimbeast Season 1 rank
-                                    <p>
-                                    <p><?= $ab_rank ?>
-                                    <p>
+                                    <div class="bg-gray-600/50 p-4 rounded">
+                                        <p class="font-extrabold font-mono mb-2 text-xl">Aimbeast Season 1
+                                            rank
+                                        </p>
+                                        <p class="flex items-center justify-center gap-1 <?= $ab_rank_color; ?> "><img
+                                                src="<?= $ab_rank_icon; ?>" width="28px">
+                                            <?= $ab_rank; ?> </p>
                                     <?php endif; ?>
-                            </div>
+                                </div>
 
-                            <div class="bg-gray-600/50 p-4 rounded">
                                 <?php if ($ab2_rank != 'N/A'): ?>
-                                    <p class="font-extrabold font-mono mb-2 text-xl">Aimbeast Season 2 rank
-                                    <p>
-                                    <p> <?= $ab2_rank ?></p>
-                                <?php endif; ?>
+                                    <div class="bg-gray-600/50 p-4 rounded">
+                                        <p class="font-extrabold font-mono mb-2 text-xl">Aimbeast Season 2 rank
+                                        </p>
+                                        <p class="flex items-center justify-center gap-1 <?= $ab2_rank_color; ?>"><img
+                                                src="<?= $ab2_rank_icon; ?>" width="28px"> <?= $ab2_rank ?></p>
+                                    <?php endif; ?>
+                                </div>
                             </div>
-
-
-
                         </div>
-
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
-
 </body>

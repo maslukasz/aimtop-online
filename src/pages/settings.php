@@ -144,12 +144,26 @@ if (!empty($_POST['about'])) {
                     <select name="ab_rank" id="ab_rank"
                         class="bg-gray-800 p-1 text-sm rounded border border-gray-500/80 text-gray-300 shadow-md">
                         <option value=<?= $ab_rank ?> selected>✅ <?= $ab_rank ?></option>
-                        <option value="Bronze">Bronze</option>
-                        <option value="Silver">Silver</option>
-                        <option value="Gold">Gold</option>
-                        <option value="Platinum">Platinum</option>
-                        <option value="Diamond">Diamond</option>
-                        <option value="Master">Master</option>
+                        <option value="Bronze 1">Bronze 1</option>
+                        <option value="Bronze 2">Bronze 2</option>
+                        <option value="Bronze 3">Bronze 3</option>
+                        <option value="Silver 1">Silver 1</option>
+                        <option value="Silver 2">Silver 2</option>
+                        <option value="Silver 3">Silver 3</option>
+                        <option value="Gold 1">Gold 1</option>
+                        <option value="Gold 2">Gold 2</option>
+                        <option value="Gold 3">Gold 3</option>
+                        <option class="bg-[url('../../../public/img/plat1.png')]" value="Platinum 1"><span
+                                class="bg-[url('../../../public/img/plat1.png')]"> </span> Platinum
+                            1</option>
+                        <option value="Platinum 2">Platinum 2</option>
+                        <option value="Platinum 3">Platinum 3</option>
+                        <option value="Diamond 1">Diamond 1</option>
+                        <option value="Diamond 2">Diamond 2</option>
+                        <option value="Diamond 3">Diamond 3</option>
+                        <option value="Master 1">Master 1</option>
+                        <option value="Master 2">Master 2</option>
+                        <option value="Master 3">Master 3</option>
                         <option value="Grandmaster">Grandmaster</option>
                     </select><br>
 
@@ -157,16 +171,32 @@ if (!empty($_POST['about'])) {
                     <select name="ab2_rank" id="ab2_rank"
                         class="bg-gray-800 p-1 text-sm rounded border border-gray-500/80 text-gray-300 shadow-md">
                         <option value=<?= $ab2_rank ?> selected>✅ <?= $ab2_rank ?></option>
-                        <option value="Bronze">Bronze</option>
-                        <option value="Silver">Silver</option>
-                        <option value="Gold">Gold</option>
-                        <option value="Platinum">Platinum</option>
-                        <option value="Diamond">Diamond</option>
-                        <option value="Ruby">Diamond</option>
-                        <option value="Elite">Diamond</option>
-                        <option value="Master">Master</option>
+                        <option value="Bronze 1">Bronze 1</option>
+                        <option value="Bronze 2">Bronze 2</option>
+                        <option value="Bronze 3">Bronze 3</option>
+                        <option value="Silver 1">Silver 1</option>
+                        <option value="Silver 2">Silver 2</option>
+                        <option value="Silver 3">Silver 3</option>
+                        <option value="Gold 1">Gold 1</option>
+                        <option value="Gold 2">Gold 2</option>
+                        <option value="Gold 3">Gold 3</option>
+                        <option value="Platinum 1">Platinum 1</option>
+                        <option value="Platinum 2">Platinum 2</option>
+                        <option value="Platinum 3">Platinum 3</option>
+                        <option value="Diamond 1">Diamond 1</option>
+                        <option value="Diamond 2">Diamond 2</option>
+                        <option value="Diamond 3">Diamond 3</option>
+                        <option value="Ruby 1">Ruby 1</option>
+                        <option value="Ruby 2">Ruby 2</option>
+                        <option value="Ruby 3">Ruby 3</option>
+                        <option value="Elite 1">Elite 1</option>
+                        <option value="Elite 2">Elite 2</option>
+                        <option value="Elite 3">Elite 3</option>
+                        <option value="Master 1">Master 1</option>
+                        <option value="Master 2">Master 2</option>
+                        <option value="Master 3">Master 3</option>
                         <option value="Grandmaster">Grandmaster</option>
-                        <option value="Supreme">Grandmaster</option>
+                        <option value="Supreme">Supreme</option>
                     </select>
                     <p class="text-xs text-white/30">Refresh if didn't change</p>
 
