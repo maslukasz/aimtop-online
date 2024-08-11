@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <p class="px-6 text-sm text-center dark:text-gray-600">Don't have an account yet?
                     <a rel="noopener noreferrer" href="/auth/register" class="hover:underline dark:text-green-600">Sign
-                        up</a>.
+                        in</a>.
                 </p>
             </div>
         </form>
