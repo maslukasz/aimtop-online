@@ -4,7 +4,7 @@
 
 </head>
 
-<?php require_once './src/components/navbar.php'; ?>
+<?php require_once "./src/components/navbar.php"; ?>
 
 <body class='bg-gray-800'>
     <section class='text-gray-300 flex justify-center mt-8 mb-20'>
@@ -21,7 +21,7 @@
                 and consolidating them in <span class='text-red-500 underline'>one place</span>. There are so many
                 groups
                 and guides out there that it can be overwhelming, so we want to assist you in navigating this
-                abundance of information.
+                abundance of information. xdd
             </p>
         </div>
     </section>
